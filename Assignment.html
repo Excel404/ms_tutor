@@ -10,38 +10,49 @@
   
 </body>
 <script type="text/javascript">
-/*For the first bank
+/*For the firstBank
 principal (p)=#100000
 rate (r)= 10%
 time (t) = 2 years or 24months
-Amount (a)=(p*r*t/100)+p
+interest(Ix)=p*r*t/100
+amount (a)=Ix+p
 */
 var p=100000;
 var r=10;
 var t=24;
-var a;
-a=(p*r*t/100)+p;
+var Ix;
+Ix=(p*r*t/100);
+  var a;
+  a=Ix+p;
+  console.log(Ix)
+  document.write("The interest to be paid to firstBankis="+""+"#"+Ix)
 console.log(a)
-document.write("The amount to be paid to the first bank is="+""+"#"+a)
+document.write("The amount to be paid to the firstBank is="+""+"#"+a)
+document.write("<br>")m
 document.write("<br>")
-document.write("<br>")
-/*for the second bank
+/*for the secondBank
 principal (p)=#100000
 rate (r)=2.5%
 time (t)=2 years
 n=24
-Amount (a)=p*(1+r/n)**(n*t)
+compoundInterest (Iy)=(p*r/n)**(n*t)
+Amount (a)= p+Iy
+
 */
 var p=100000;
 var r=2.5;
 var t=2;
 var n=24;
+  var Iy=(p*r/n)**(n*t);
+  console.log(Iy);
+  document.write("The compoundInterest to be paid to secondBank  is="+""+"#"+Iy)
 var a;
-a=p*(1+r/n)**(n*t);
+a=p+Iy;
 console.log(a)
-document.write("The amount to be paid to the second bank is ="+""+"#"+a)
+document.write("The amount to be paid to the secondBank is ="+""+"#"+a)
 document.write("<br>")
 document.write("<br>")
-document.write("Joseph should get the loan from the first bank as he will have to pay a lesser interest")
-</script>
+document.write("Joseph should get the loan from the firstBank as he will have to pay a lesser interest")
+If(Ix>Iy){alert("Joseph should get the loan from the firstBank)} else{alert("Joseph should get loan from the secondBank")}
+  </script>
 </html>
